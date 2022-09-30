@@ -19,6 +19,6 @@ int main()
     int a;
     printf("Entrez un entier : ");
     scanf("%d", &a);
-    printf(nombre_est_pair(a));
+    printf("%s\n",nombre_est_pair(a));
     return 0;
 }

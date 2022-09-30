@@ -17,7 +17,7 @@ int main()
     int a;
     int b;
     printf("Entrez deux valeurs : ");
-    scanf("%d", &a, &b);
-    printf( "%d",calcul_valeur_absolue(a, b));
+    scanf("%d %d", &a, &b);
+    printf( "%d\n",calcul_valeur_absolue(a, b));
     return 0;
 }
