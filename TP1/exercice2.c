@@ -4,13 +4,13 @@
 // Écrire un programme qui calcule la valeur absolue de la différence de deux nombres.
 //
 
-int nombre_est_pair(int);
-int nombre_est_pair(int nombre)
+char* nombre_est_pair(int);
+char* nombre_est_pair(int nombre)
 {
     if(nombre%2 == 0){
-        return printf("ce nombre est pair");
+        return "ce nombre est pair";
     }else{
-        return printf("ce nombre est impair");
+        return "ce nombre est impair";
     }
 }
 
@@ -19,6 +19,6 @@ int main()
     int a;
     printf("Entrez un entier : ");
     scanf("%d", &a);
-    nombre_est_pair(a);
+    printf(nombre_est_pair(a));
     return 0;
 }
