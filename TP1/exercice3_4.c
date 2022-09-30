@@ -6,7 +6,7 @@
 int max_entre_nombre(int, int, int );
 int nombre_est_pair(int nombreA, int nombreB, int nombreC)
 {
-    int max = nombreA
+    int max = nombreA;
     if(max < nombreB){
         max = nombreB;
     }
@@ -33,6 +33,6 @@ int main()
         scanf("%d", &a, &b, &c);
         maxNombre = nombre_est_pair(a,b, c);
     }
-    printf("le nombre maximum saisie est : ",maxNombre)
+    printf("le nombre maximum saisie est : ",maxNombre);
     return 0;
 }
