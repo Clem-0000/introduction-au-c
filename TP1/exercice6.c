@@ -7,6 +7,6 @@ int main()
     int a;
     printf("Entrez un entier : ");
     scanf("%d", &a);
-    printf("le double de : ",a,"est : " A*2);
+    printf("le double de : ",a,"est : " a*2);
     return 0;
 }
