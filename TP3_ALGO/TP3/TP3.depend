@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1669386324 source:c:\userdata\z004jchd\onedrive - siemens ag\documents\personnel\cours\c\intoduction_c\introduction-au-c\tp3_algo\liste.c
+	"liste.h"
+	<stdio.h>
+
+1669386187 c:\userdata\z004jchd\onedrive - siemens ag\documents\personnel\cours\c\intoduction_c\introduction-au-c\tp3_algo\liste.h
+	<stdlib.h>
+
+1669386205 source:c:\userdata\z004jchd\onedrive - siemens ag\documents\personnel\cours\c\intoduction_c\introduction-au-c\tp3_algo\main.c
+	<stdio.h>
+	"liste.h"
+	"partie2.h"
+	"partie3.h"
+	"partie4.h"
+
+1669383400 c:\userdata\z004jchd\onedrive - siemens ag\documents\personnel\cours\c\intoduction_c\introduction-au-c\tp3_algo\partie2.h
+
+1669383400 c:\userdata\z004jchd\onedrive - siemens ag\documents\personnel\cours\c\intoduction_c\introduction-au-c\tp3_algo\partie3.h
+
+1669383400 c:\userdata\z004jchd\onedrive - siemens ag\documents\personnel\cours\c\intoduction_c\introduction-au-c\tp3_algo\partie4.h
+

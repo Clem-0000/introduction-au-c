@@ -7,8 +7,8 @@
 #define MAIN_C_PARTIE1_H
 
 #define booleen int
-#define faux 0
-#define vrai 1
+#define False 0
+#define True 1
 #define typeElem int
 #define liste_vide NULL
 
@@ -29,11 +29,7 @@ typeElem tete(liste);
 
 int longueur(liste);
 
-int longueurRec(liste);
-
 void afficher(liste);
-
-void afficherRec(liste);
 
 booleen islast(liste);
 

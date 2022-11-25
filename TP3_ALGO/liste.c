@@ -3,7 +3,6 @@
 //
 #include "liste.h"
 #include <stdio.h>
-#include <limits.h>
 
 booleen est_vide(liste L) {
     return L == liste_vide;
@@ -24,68 +23,74 @@ typeElem tete(liste L) {
     return L->e;
 }
 
-int longueur(liste L) {
-    int i = 0;
-    while (!est_vide(L)) {
-        i++;
-        L = suite(L);
+int longueur( liste L){
+  int i=0 ;
+  while( !est_vide(L)){
+    i++ ;
+    L= suite(L) ;
+  }
+  return i ;
+}
+
+void afficher( liste L){
+  while(!est_vide(L)){
+    printf(" %d", tete(L)) ;
+    L= suite(L);
+  }
+  printf("\n");
+}
+
+booleen islast( liste L){
+  if(est_vide(suite(L)))
+    return True;
+  else
+    return False;
+
+}
+
+typeElem last(liste L){
+  while(!est_vide(L)){
+    if(islast(L))return(tete(L));
+    L= suite(L);
+  }
+}
+
+typeElem maxL( liste L){
+  int max = -99999;
+
+  if(!est_vide(L)){
+    while(!est_vide(L)){
+      if(tete(L) > max){
+        max = tete(L);
+      }
+      L= suite(L);
     }
-    return i;
-}
-
-int longueurRec(liste L) {
-    if (est_vide(L)) return 0;
-    return 1 + longueurRec(suite(L));
-}
-
-void afficher(liste L) {
-    while (!est_vide(L)) {
-        printf("%d ", tete(L));
-        L = suite(L);
-    }
-    printf("\n");
-}
-
-void afficherRec(liste L) {
-    if (!est_vide(L)) {
-        printf("%d ", tete(L));
-        afficherRec(suite(L));
-    }
-    else printf("\n");
-}
-
-booleen islast(liste L) {
-    return est_vide(suite(L));
-}
-
-typeElem last(liste L) {
-    while (!est_vide(L)) {
-        L = suite(L);
-    }
-    return tete(L);
-}
-
-typeElem maxL(liste L) {
-    int max = INT_MIN;
-    while (!est_vide(L)) {
-        if(max < L->e){
-            max = L->e;
-        }
-        L = L ->suiv;
-    }
-    // qui retourne l’élément maximal d’une liste non vide (en itératif)
     return max;
+  }
+  else
+    return -max;
 }
 
-typeElem rec_maxL(liste L) {
-    // qui retourne l’élément maximal d’une liste non vide (en récursif)
-    return 0;
-}
+typeElem rec_maxL( liste L){
+  static int max = 0;
 
-booleen recherche(typeElem X, liste L) {
-    while (!est_vide(L)) {
-        if (X == tete(L)) return vrai;
-        L = suite(L);
+    if(!est_vide(L)){
+      if(tete(L) > max){
+        max = tete(L);
+      }
+      rec_maxL(suite(L)) ;
     }
-    return faux;
+
+  return max;
+ }
+
+booleen recherche(typeElem X ,liste L){
+
+  while( !est_vide(L)){
+    if(X == tete(L))
+      return True ;
+    L= suite(L);
+  }
+
+  return False;
 }
