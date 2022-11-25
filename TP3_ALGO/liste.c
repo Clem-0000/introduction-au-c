@@ -3,6 +3,7 @@
 //
 #include "liste.h"
 #include <stdio.h>
+#include <limits.h>
 
 booleen est_vide(liste L) {
     return L == liste_vide;
@@ -65,9 +66,15 @@ typeElem last(liste L) {
 }
 
 typeElem maxL(liste L) {
-
+    int max = INT_MIN;
+    while (!est_vide(L)) {
+        if(max < L->e){
+            max = L->e;
+        }
+        L = L ->suiv;
+    }
     // qui retourne l’élément maximal d’une liste non vide (en itératif)
-    return 0;
+    return max;
 }
 
 typeElem rec_maxL(liste L) {
