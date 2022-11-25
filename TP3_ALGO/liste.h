@@ -23,10 +23,13 @@ int est_vide(liste);
 
 liste cons(typeElem, liste);
 
+void cons_(typeElem, liste *);
+
 liste suite(liste);
 
 typeElem tete(liste);
 
+//PARTIE 1
 int longueur(liste);
 
 void afficher(liste);
@@ -41,6 +44,7 @@ typeElem rec_maxL(liste);
 
 booleen recherche(typeElem, liste);
 
+//PARTIE 2
 int nb_Occu(typeElem, liste);
 
 typeElem kieme(liste, int);
@@ -49,4 +53,6 @@ int pos(liste, typeElem);
 
 liste adr(liste, typeElem);
 
+//PARTIE 3
+void iter_inverse(liste *);
 #endif //MAIN_C_PARTIE1_H

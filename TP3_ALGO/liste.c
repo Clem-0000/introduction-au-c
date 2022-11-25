@@ -139,4 +139,15 @@ liste adr(liste L, typeElem E) {
 }
 
 //PARTIE 3
+void iter_inverse(liste *L){
 
+  typeElem nbrVal = longueur(*L);
+  liste tmp = liste_vide;
+  if(!est_vide(*L)){
+    for(int i = 0; i < nbrVal; i++){
+      tmp = cons(tete(*L),tmp);
+      *L = suite(*L);
+    }
+    *L = tmp;
+  }
+}
