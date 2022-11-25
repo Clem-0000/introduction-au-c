@@ -45,4 +45,8 @@ int nb_Occu(typeElem, liste);
 
 typeElem kieme(liste, int);
 
+int pos(liste, typeElem);
+
+liste adr(liste, typeElem);
+
 #endif //MAIN_C_PARTIE1_H

@@ -137,3 +137,6 @@ liste adr(liste L, typeElem E) {
         }
     } else return liste_vide;
 }
+
+//PARTIE 3
+
