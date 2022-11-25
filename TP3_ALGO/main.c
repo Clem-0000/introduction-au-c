@@ -25,9 +25,9 @@ int main() {
     afficherRec(liste_chaine);
 
     liste chaine = cons(12, liste_vide);
-    int result = islast(chaine);
-    printf("IS_LAST : %d \n", result);
-    printf("%d\n", last(liste_chaine));
+    printf("IS_LAST : %d \n", islast(chaine)); // VALIDÉ PAR M. DJEBALI MAIS NON FONCTIONNEL --> renvoie false (1)
+
+    printf("%d\n", maxL(liste_chaine));
 
 //    printf("maxL : %d\n",maxL(liste));
 //
