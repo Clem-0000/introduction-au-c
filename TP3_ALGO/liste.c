@@ -3,6 +3,7 @@
 //
 #include "liste.h"
 #include <stdio.h>
+#include <limits.h>
 
 booleen est_vide(liste L) {
     return L == liste_vide;
@@ -23,6 +24,7 @@ typeElem tete(liste L) {
     return L->e;
 }
 
+//PARTIE 1
 int longueur( liste L){
   int i=0 ;
   while( !est_vide(L)){
@@ -56,7 +58,7 @@ typeElem last(liste L){
 }
 
 typeElem maxL( liste L){
-  int max = -99999;
+  int max = INT_MIN;
 
   if(!est_vide(L)){
     while(!est_vide(L)){
@@ -86,11 +88,52 @@ typeElem rec_maxL( liste L){
 
 booleen recherche(typeElem X ,liste L){
 
-  while( !est_vide(L)){
+  while(!est_vide(L)){
     if(X == tete(L))
       return True ;
     L= suite(L);
   }
 
   return False;
+}
+
+//PARTIE 2
+int nb_Occu(typeElem X ,liste L){
+    int compteur = 0;
+    while(!est_vide(L)){
+        if(X == tete(L)) compteur++ ;
+        L= suite(L);
+    }
+    return compteur;
+}
+
+typeElem kieme(liste L, int k) {
+    typeElem valeur = -1;
+    if(longueur(L) >= k) {
+        for(int i=1; i<k; i++) L=suite(L);
+        valeur = tete(L);
+    }
+    return valeur;
+}
+
+int pos(liste L, typeElem E) {
+    int pos = -1;
+    if (recherche(E, L)){
+        pos = 1;
+        while(!est_vide(L)){
+            if(E == tete(L)) return pos;
+            L= suite(L);
+            pos++;
+        }
+    }
+    return pos;
+}
+
+liste adr(liste L, typeElem E) {
+    if (recherche(E, L)){
+        while(!est_vide(L)){
+            if(E == tete(L)) return L;
+            L= suite(L);
+        }
+    } else return liste_vide;
 }

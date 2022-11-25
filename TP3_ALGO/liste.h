@@ -41,4 +41,8 @@ typeElem rec_maxL(liste);
 
 booleen recherche(typeElem, liste);
 
+int nb_Occu(typeElem, liste);
+
+typeElem kieme(liste, int);
+
 #endif //MAIN_C_PARTIE1_H
